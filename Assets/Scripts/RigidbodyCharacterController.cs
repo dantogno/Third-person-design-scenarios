@@ -30,13 +30,21 @@ public class RigidbodyCharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // The horizontal and vertical input from a gamepad / joystick
+        // stored in a Vector3 because we will use it to move a player on an X/Z plane.
         var inputDirection = new Vector3(input.x, 0, input.y);
 
+        // I am assuming this is essentially converting the forward vector of a 3D
+        // camera to a 2D x/Z plane? I made these variable names up based on this assumption...
         var cameraFlattenedForward = Camera.main.transform.forward;
         cameraFlattenedForward.y = 0;
 
+        // This function "creates a rotation with  the specified forward and up directions)
+        // https://docs.unity3d.com/ScriptReference/Quaternion.LookRotation.html
         var cameraRotation = Quaternion.LookRotation(cameraFlattenedForward);
 
+        // If I move a character based on this input, it moves relative to the camera
+        // instead of the world
         Vector3 cameraRelativeInput = cameraRotation * inputDirection;
 
         collider.material = inputDirection.magnitude > 0 ? movingPhysicsMaterial : stoppingPhysicsMaterial;
