@@ -32,11 +32,18 @@ public class RigidbodyCharacterController : MonoBehaviour
     {
         var inputDirection = new Vector3(input.x, 0, input.y);
 
+        var cameraFlattenedForward = Camera.main.transform.forward;
+        cameraFlattenedForward.y = 0;
+
+        var cameraRotation = Quaternion.LookRotation(cameraFlattenedForward);
+
+        Vector3 cameraRelativeInput = cameraRotation * inputDirection;
+
         collider.material = inputDirection.magnitude > 0 ? movingPhysicsMaterial : stoppingPhysicsMaterial;
 
         if (rigidbody.velocity.magnitude < maxSpeed)
         {
-            rigidbody.AddForce(inputDirection * accelerationForce, ForceMode.Acceleration);
+            rigidbody.AddForce(cameraRelativeInput * accelerationForce, ForceMode.Acceleration);
         }
 
         Debug.Log($"Player velocity: {rigidbody.velocity}");
