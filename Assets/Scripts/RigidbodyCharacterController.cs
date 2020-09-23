@@ -50,18 +50,18 @@ public class RigidbodyCharacterController : MonoBehaviour
 
         // If I move a character based on this input, it moves relative to the camera
         // instead of the world
-        Vector3 cameraRelativeInput = cameraRotation * inputDirection;
+        Vector3 cameraRelativeInputDirection = cameraRotation * inputDirection;
 
         collider.material = inputDirection.magnitude > 0 ? movingPhysicsMaterial : stoppingPhysicsMaterial;
 
         if (rigidbody.velocity.magnitude < maxSpeed)
         {
-            rigidbody.AddForce(cameraRelativeInput * accelerationForce, ForceMode.Acceleration);
+            rigidbody.AddForce(cameraRelativeInputDirection * accelerationForce, ForceMode.Acceleration);
         }
 
         if (inputDirection.magnitude > 0)
         {
-            var targetRotation = Quaternion.LookRotation(cameraRelativeInput);
+            var targetRotation = Quaternion.LookRotation(cameraRelativeInputDirection);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed);
         }
 
