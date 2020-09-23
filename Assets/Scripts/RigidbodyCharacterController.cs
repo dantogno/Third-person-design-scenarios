@@ -11,6 +11,11 @@ public class RigidbodyCharacterController : MonoBehaviour
     private float maxSpeed = 2;
 
     [SerializeField]
+    [Tooltip("1 = instant turning, 0 = no turning")]
+    [Range(0,1)]
+    private float turnSpeed = 0.1f;
+
+    [SerializeField]
     private PhysicMaterial movingPhysicsMaterial, stoppingPhysicsMaterial;
 
     private new Rigidbody rigidbody;
@@ -53,7 +58,8 @@ public class RigidbodyCharacterController : MonoBehaviour
         {
             rigidbody.AddForce(cameraRelativeInput * accelerationForce, ForceMode.Acceleration);
             var targetRotation = Quaternion.LookRotation(cameraRelativeInput);
-            transform.rotation = targetRotation;
+            
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed);
         }
 
         Debug.Log($"Player velocity: {rigidbody.velocity}");
