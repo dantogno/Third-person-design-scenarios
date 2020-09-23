@@ -57,8 +57,11 @@ public class RigidbodyCharacterController : MonoBehaviour
         if (rigidbody.velocity.magnitude < maxSpeed)
         {
             rigidbody.AddForce(cameraRelativeInput * accelerationForce, ForceMode.Acceleration);
+        }
+
+        if (inputDirection.magnitude > 0)
+        {
             var targetRotation = Quaternion.LookRotation(cameraRelativeInput);
-            
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed);
         }
 
