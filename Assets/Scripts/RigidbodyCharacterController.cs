@@ -52,6 +52,8 @@ public class RigidbodyCharacterController : MonoBehaviour
         if (rigidbody.velocity.magnitude < maxSpeed)
         {
             rigidbody.AddForce(cameraRelativeInput * accelerationForce, ForceMode.Acceleration);
+            var targetRotation = Quaternion.LookRotation(cameraRelativeInput);
+            transform.rotation = targetRotation;
         }
 
         Debug.Log($"Player velocity: {rigidbody.velocity}");
