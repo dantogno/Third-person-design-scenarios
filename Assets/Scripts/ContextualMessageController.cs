@@ -16,8 +16,6 @@ public class ContextualMessageController : MonoBehaviour
         messageText = GetComponent<TMP_Text>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0;
-
-        StartCoroutine(ShowText("TESTING!", 3));
     }
 
     private IEnumerator ShowText(string message, float duration)
