@@ -42,6 +42,9 @@ public class ContextualMessageController : MonoBehaviour
 
     private void OnContextualMessageTriggered(string message, float duration)
     {
+        // for a robust system, we would want to set up some sort of queue system.
+        // For now, we'll just stop the current coroutine before starting a new one.
+        StopAllCoroutines();
         StartCoroutine(ShowText(message, duration));
     }
 
