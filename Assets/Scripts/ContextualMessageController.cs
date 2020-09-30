@@ -22,11 +22,14 @@ public class ContextualMessageController : MonoBehaviour
 
     private IEnumerator ShowText(string message, float duration)
     {
+        // show the message for the duration
         messageText.text = message;
         canvasGroup.alpha = 1;
         float fadeStartTime;
         float elapsedTime = 0;
         yield return new WaitForSeconds(duration);
+
+        // then fade out
         fadeStartTime = Time.time;
 
         while (elapsedTime < fadeDuration)
