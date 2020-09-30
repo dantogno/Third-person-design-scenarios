@@ -65,7 +65,7 @@ public class RigidbodyCharacterController : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed);
         }
 
-        Debug.Log($"Player velocity: {rigidbody.velocity}");
+        // Debug.Log($"Player velocity: {rigidbody.velocity}");
     }
     private void UpdateInput()
     {
