@@ -39,4 +39,18 @@ public class ContextualMessageController : MonoBehaviour
 
         canvasGroup.alpha = 0;
     }
+
+    private void OnContextualMessageTriggered(string message, float duration)
+    {
+        StartCoroutine(ShowText(message, duration));
+    }
+
+    private void OnEnable()
+    {
+        ContextualMessageTrigger.ContextualMessageTriggered += OnContextualMessageTriggered;
+    }
+    private void OnDisable()
+    {
+        ContextualMessageTrigger.ContextualMessageTriggered -= OnContextualMessageTriggered;
+    }
 }
