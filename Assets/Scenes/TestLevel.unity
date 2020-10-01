@@ -199,7 +199,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76057425}
-  m_LocalRotation: {x: -0.055890594, y: 0.9251749, z: 0.15031797, w: 0.34399462}
+  m_LocalRotation: {x: -0.05589059, y: 0.9251749, z: 0.15031797, w: 0.3439946}
   m_LocalPosition: {x: 10.379765, y: 1.6, z: -12.028505}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -632,8 +632,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351341603}
-  m_LocalRotation: {x: 0.06853832, y: 0.9190014, z: -0.18433726, w: 0.34169972}
-  m_LocalPosition: {x: -3.598608, y: 3.3585987, z: 4.1702266}
+  m_LocalRotation: {x: -0.043359254, y: 0.9300245, z: 0.11661141, w: 0.34579796}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1406169560}
@@ -2555,7 +2555,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780859009}
-  m_LocalRotation: {x: -0.055890948, y: 0.92517483, z: 0.15031783, w: 0.34399468}
+  m_LocalRotation: {x: -0.055890944, y: 0.92517483, z: 0.15031783, w: 0.34399465}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3224,7 +3224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a68446f069119439515befbd4ffe69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Longer message duration
+  message: Longer message duration type even longer message like a book that is really
+    long.
   messageDuration: 5
 --- !u!114 &957344038
 MonoBehaviour:
@@ -4342,7 +4343,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533334719}
-  m_LocalRotation: {x: -0.049641866, y: 0.9277496, z: 0.13350883, w: 0.34495214}
+  m_LocalRotation: {x: -0.049641855, y: 0.9277496, z: 0.13350883, w: 0.3449521}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
