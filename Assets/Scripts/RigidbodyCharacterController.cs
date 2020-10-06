@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class RigidbodyCharacterController : MonoBehaviour
 {
@@ -26,11 +27,6 @@ public class RigidbodyCharacterController : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         collider = GetComponent<Collider>();
-    }
-
-    private void Update()
-    {
-        UpdateInput();
     }
 
     private void FixedUpdate()
@@ -67,9 +63,9 @@ public class RigidbodyCharacterController : MonoBehaviour
 
         // Debug.Log($"Player velocity: {rigidbody.velocity}");
     }
-    private void UpdateInput()
+    public void OnMove(InputAction.CallbackContext context)
     {
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
+        Debug.Log("Move called!");
+        input = context.ReadValue<Vector2>();
     }
 }

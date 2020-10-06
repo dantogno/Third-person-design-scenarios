@@ -6,20 +6,18 @@ using UnityEngine.InputSystem;
 
 public class CameraInputHandler : MonoBehaviour
 {
-    private PlayerInput playerInput;
     private CinemachineFreeLook cinemachineFreeLook;
 
     // Start is called before the first frame update
     void Start()
     {
         cinemachineFreeLook = GetComponent<CinemachineFreeLook>();
-        playerInput = GetComponent<PlayerInput>();
     }
 
     public void OnLook(InputAction.CallbackContext context)
     {
         var input = context.ReadValue<Vector2>();
-        Debug.Log($"Look X: {input.x} Mouse Y: {input.y}");
+        //Debug.Log($"Look X: {input.x} Mouse Y: {input.y}");
         cinemachineFreeLook.m_XAxis.Value += input.x;
         cinemachineFreeLook.m_YAxis.Value += input.y;
     }
