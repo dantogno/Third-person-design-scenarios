@@ -2634,7 +2634,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76057425}
-  m_LocalRotation: {x: 0.11342083, y: 3.5297885e-15, z: -4.0295178e-16, w: 0.993547}
+  m_LocalRotation: {x: 0.11342083, y: 0, z: 0, w: 0.993547}
   m_LocalPosition: {x: 0, y: 4.7, z: -40.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3298,7 +3298,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273710043}
-  m_LocalRotation: {x: 0.113420814, y: 0.000000029262702, z: -0.00000025633622, w: 0.9935471}
+  m_LocalRotation: {x: 0.113420814, y: 0.000000029262688, z: -0.00000025633614, w: 0.9935471}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6955,7 +6955,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876546768}
-  m_LocalRotation: {x: 0.095377766, y: 0.0000000036470431, z: -0.00000003806355, w: 0.99544114}
+  m_LocalRotation: {x: 0.09537776, y: 0.0000000036470411, z: -0.000000038063536, w: 0.9954412}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7759,7 +7759,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137844744}
-  m_LocalRotation: {x: 0.13147417, y: 0.00000005709997, z: -0.00000043053578, w: 0.9913196}
+  m_LocalRotation: {x: 0.13147415, y: 0.000000057099758, z: -0.00000043053578, w: 0.99131966}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7973,8 +7973,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"collection":{"$content":[{"name":"Trigger","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 1718819461}
 --- !u!4 &1360291924
 Transform:
   m_ObjectHideFlags: 0
@@ -8580,7 +8581,7 @@ GameObject:
   - component: {fileID: 1630890522}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9065,17 +9066,9 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 01000000
-  m_SelectedEdges:
-  - a: 4
-    b: 5
-  - a: 6
-    b: 4
-  - a: 5
-    b: 7
-  - a: 7
-    b: 6
-  m_SelectedVertices: 04000000050000000600000007000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &1718819466
 MeshRenderer:
   m_ObjectHideFlags: 16
@@ -10330,8 +10323,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"collection":{"$content":[{"name":"DoorTrigger","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 1718819461}
 --- !u!95 &1828855581
 Animator:
   serializedVersion: 3
